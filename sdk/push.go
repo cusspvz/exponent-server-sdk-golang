@@ -91,8 +91,8 @@ const ErrorMessageRateExceeded = "MessageRateExceeded"
 type PushResponse struct {
 	PushMessage PushMessage
 	Status      string            `json:"status"`
-	Message     string            `json:"message"`
-	Details     map[string]string `json:"details"`
+	Message     string            `json:"message,omitempty"`
+	Details     map[string]string `json:"details,omitempty"`
 }
 
 func (r *PushResponse) isSuccess() bool {
